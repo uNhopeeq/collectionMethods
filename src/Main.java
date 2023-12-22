@@ -1,23 +1,42 @@
 import Lists.collectionLists;
 import Maps.collectionMaps;
+import Generics.collectionGenerics;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
 
-        // ToDo do to 25 december
-        //  - посмотреть все лекции по коллекциям
-        //  - сделать тесты к коллекциям
-        //  - сделать терминаловские задания
-        //  - сделать гитовские задания
-        //  - html css
+        List<Map<String, String>> books = new ArrayList<>();
+        Map<String, String> where = new HashMap<>(Map.of("author", "Shakespeare", "year", "1611"));
 
-        var line1 = "Javagod";
-        var line2 = "jaa";
-        var line3 = "Привет как дела пока никак а у тебя как дела привет пока да а ок а а а а";
-        var line4 = "";
+        Map<String, String> book1 = new HashMap<>(
+                Map.of("title", "Cymbeline", "author", "Shakespeare", "year", "1611")
+        );
+        Map<String, String> book2 = new HashMap<>(
+                Map.of("title", "Book of Fooos", "author", "FooBar", "year", "1111")
+        );
+        Map<String, String> book3 = new HashMap<>(
+                Map.of("title", "The Tempest", "author", "Shakespeare", "year", "1611")
+        );
+        Map<String, String> book4 = new HashMap<>(
+                Map.of("title", "Book of Foos Barrrs", "author", "FooBar", "year", "2222")
+        );
+        Map<String, String> book5 = new HashMap<>(
+                Map.of("title", "Still foooing", "author", "FooBar", "year", "3333")
+        );
 
-        System.out.println(collectionLists.scrabble(line1, line2));
-        System.out.println(collectionMaps.getWordCount(line4));
+        books.add(book1);
+        books.add(book2);
+        books.add(book3);
+        books.add(book4);
+        books.add(book5);
+
+
+        System.out.println(collectionGenerics.findWhere(books, where));
     }
 }
 

@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class mapMethods {
-    public static StringBuilder trasformation(Map<String, Integer> hashMap) {
+    public static StringBuilder trasformation(Map<String, Integer> hashMap) {  // преобразует hashMap в построчный вывод
 
         StringBuilder ans = new StringBuilder();
         ans.append("{\n");
